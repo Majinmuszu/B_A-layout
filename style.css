@@ -193,10 +193,18 @@ body {
   margin-bottom: 63.5px;
 }
 .slide-dots {
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 .dot {
   cursor: pointer;
+  width: 12px;
+  height: 12px;
+  background-color: #C4C4C4;
+  border-radius: 50%;
+}
+.active {
+  background-color: #000;
 }
 .dot:not(:first-of-type) {
   margin-left: 16px;
