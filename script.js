@@ -2,6 +2,7 @@ const qs = (selector) => document.querySelector(selector);
 const qsa = (selector) => document.querySelectorAll(selector);
 const log = (any) => console.log(any);
 
+//     SLIDER
 const slider = qs(".slider-list");
 const dot1 = qs(".dot1");
 const dot2 = qs(".dot2");
@@ -57,9 +58,9 @@ const renderPosts = (n) => {
   }
 };
 const sliderCarousel = (e) => {
-    dot1.classList.remove("active");
-    dot2.classList.remove("active");
-    dot3.classList.remove("active");
+  dot1.classList.remove("active");
+  dot2.classList.remove("active");
+  dot3.classList.remove("active");
 
   if (e.target === dot1) {
     renderPosts(3);
@@ -77,3 +78,37 @@ const sliderCarousel = (e) => {
 dot1.addEventListener("click", sliderCarousel);
 dot2.addEventListener("click", sliderCarousel);
 dot3.addEventListener("click", sliderCarousel);
+
+//     GALLERY
+const next = qs(".next-pic");
+const prev = qs(".prev-pic");
+const vievPic = qs(".gallery-view");
+
+const nextPic = () => {
+  const currentPicId = vievPic.id;
+  if (currentPicId === "pic1") {
+    vievPic.src = "images/pic2.jpg";
+    vievPic.id = "pic2";
+  } else if (currentPicId === "pic2") {
+    vievPic.src = "images/pic3.jpg";
+    vievPic.id = "pic3";
+  } else if (currentPicId === "pic3") {
+    vievPic.src = "images/pic1.jpg";
+    vievPic.id = "pic1";
+  }
+};
+const prevPic = () => {
+  const currentPicId = vievPic.id;
+  if (currentPicId === "pic1") {
+    vievPic.src = "images/pic3.jpg";
+    vievPic.id = "pic3";
+  } else if (currentPicId === "pic2") {
+    vievPic.src = "images/pic1.jpg";
+    vievPic.id = "pic1";
+  } else if (currentPicId === "pic3") {
+    vievPic.src = "images/pic2.jpg";
+    vievPic.id = "pic2";
+  }
+};
+next.addEventListener("click", nextPic);
+prev.addEventListener("click", prevPic);

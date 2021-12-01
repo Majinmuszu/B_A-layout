@@ -80,12 +80,12 @@ body {
 .big-picture {
   width: 708px;
   height: 708px;
-  background-color: cornflowerblue;
+  background-color: rgb(56, 58, 61);
 }
 .wide-picture {
   width: 708px;
   height: 363px;
-  background-color: cornflowerblue;
+  background-color: rgb(56, 58, 61);
 }
 .picture-wrapper {
   margin-top: 24px;
@@ -95,7 +95,7 @@ body {
 .medium-picture {
   width: 342px;
   height: 321px;
-  background-color: cornflowerblue;
+  background-color: rgb(56, 58, 61);
 }
 .second-section {
   align-items: center;
@@ -134,6 +134,7 @@ body {
 }
 .gallery {
   margin-left: 24px;
+  position: relative;
 }
 .gallery-list {
   display: flex;
@@ -145,8 +146,27 @@ body {
   height: 220px;
   background-color: rgba(85, 90, 100, 0.342);
 }
+.next-pic,
+.prev-pic {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(121, 120, 120, 0.13);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.next-pic {
+  right:20px;
+  top: 354px;
+}
+.prev-pic {
+  left: 20px;
+  top: 354px;
+}
 .third-section {
-    margin-bottom: 64px;
+  margin-bottom: 64px;
 }
 .slider-list {
   display: flex;
@@ -185,7 +205,7 @@ body {
   margin-bottom: 67.4px;
   position: relative;
 }
-.slide{
+.slide {
   font-family: Grotesque-bold;
   font-size: 36px;
   line-height: 1.81;
@@ -200,7 +220,7 @@ body {
   cursor: pointer;
   width: 12px;
   height: 12px;
-  background-color: #C4C4C4;
+  background-color: #c4c4c4;
   border-radius: 50%;
 }
 .active {
