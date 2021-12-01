@@ -156,23 +156,25 @@ body {
   display: block;
   width: 454px;
 }
-.slide-item::before {
-  content: '';
-  display: block;
-  background-image: url(./images/icons/top-quote.svg);
-  width: 96px;
-  height: 87px;
-  transform: translateY(40px);
-  margin: 0;
+.slide-description::before {
+  content: "";
+  display: inline-block;
+  background: url(./images/icons/top-quote.svg) top center no-repeat;
+  position: absolute;
+  top: -46.1px;
+  z-index: -1;
+  width: 95.1px;
+  height: 86.4px;
 }
-.slide-item::after {
-  content: '';
-  display: block;
-  background-image: url(./images/icons/bottom-quote.svg);
-  width: 96px;
-  height: 87px;
-  transform: translateX(360px) translateY(-240px);
-  margin: 0;
+.slide-description::after {
+  content: "";
+  display: inline-block;
+  background: url(./images/icons/bottom-quote.svg) top center no-repeat;
+  position: absolute;
+  bottom: -43.4px;
+  z-index: -1;
+  width: 95.1px;
+  height: 86.4px;
 }
 .slide-description {
   font-family: Grotesque-regular;
@@ -180,6 +182,7 @@ body {
   line-height: 1.67;
   text-align: justify;
   margin-bottom: 67.4px;
+  position: relative;
 }
 .slide{
   font-family: Grotesque-bold;
