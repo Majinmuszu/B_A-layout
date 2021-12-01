@@ -172,6 +172,7 @@ body {
   background: url(./images/icons/bottom-quote.svg) top center no-repeat;
   position: absolute;
   bottom: -43.4px;
+  right: 0;
   z-index: -1;
   width: 95.1px;
   height: 86.4px;
